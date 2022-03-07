@@ -1,0 +1,17 @@
+{
+	"name": "DND Beyond Renamer",
+	"description": "Rename things in DBD Beyond",
+	"version": "1.0",
+	"manifest_version": 3,
+	"background": {
+		"service_worker": "background.js"
+	},
+	"permissions": ["storage", "activeTab", "scripting"],
+	"action": {
+		"default_popup": "popup-settings.html"
+	},
+	"content_scripts": [{
+		"matches": ["https://*.dndbeyond.com/*"],
+		"js": ["dndBeyond.js"]
+	}]
+}
